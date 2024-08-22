@@ -36,3 +36,34 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+.creeping-line {
+  padding: 5px 0px;
+  position: absolute;
+  bottom: 0; 
+  width: 100%; 
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgb(255, 89, 0);
+  color: aliceblue;
+  white-space: nowrap;
+}
+
+.creeping-line div {
+  display: flex;
+  gap: 5px;
+  animation: marquee-text 10s linear infinite;
+}
+
+.creeping-title {
+  white-space: nowrap;
+}
+
+@keyframes marquee-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
