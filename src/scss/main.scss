@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth
+}
 @import "./base/reset";
 @import "./base/variables";
 @import "./base/base";
@@ -9,6 +12,9 @@
 
 @import "./components/header/header";
 @import "./components/hero/hero";
+
+@import "./components/main/catalog";
+@import "./components/main/blocks";
 
 
 @import "./components/footer/footer";

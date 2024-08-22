@@ -3,6 +3,7 @@
   overflow: hidden;
   padding-top: 200px;
   padding-bottom: 200px;
+
 }
 
 .hero-video {
@@ -30,11 +31,14 @@
 
 .hero-title {
   line-height: 1.363;
-  font-size: 40px;
+  letter-spacing: 3px;
+  font-size: 50px;
   color: var(--colorTextContrast);
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  font-family: "New Amsterdam", sans-serif;
+
 }
 
 .creeping-line {

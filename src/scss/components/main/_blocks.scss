@@ -1,0 +1,13 @@
+.reviews, .contact, .wholesale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(93,11,149);
+    background: linear-gradient(90deg, rgba(93,11,149,0.7792366946778712) 0%, rgba(199,88,88,1) 50%, rgba(139,85,8,0.9108893557422969) 100%);
+    h2{
+        margin: 500px auto;
+        font-size: 50px;
+        font-weight: 700;
+        color: #fff;
+    }
+}

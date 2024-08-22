@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 div,
@@ -147,7 +151,7 @@ img {
 body {
   color: var(--colorTextTitle);
   line-height: 1.714;
-  font-family: "New Amsterdam", sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -331,11 +335,13 @@ body {
 
 .hero-title {
   line-height: 1.363;
-  font-size: 40px;
+  letter-spacing: 3px;
+  font-size: 50px;
   color: var(--colorTextContrast);
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  font-family: "New Amsterdam", sans-serif;
 }
 
 .creeping-line {
@@ -368,6 +374,101 @@ body {
     transform: translateX(-50%);
   }
 }
+.catalog {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: rgb(93, 11, 149);
+  background: linear-gradient(90deg, rgba(93, 11, 149, 0.7792366947) 0%, rgb(199, 88, 88) 50%, rgba(139, 85, 8, 0.9108893557) 100%);
+}
+
+.catalog__heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -16px;
+  margin-top: 0;
+}
+
+.grid__item {
+  flex-basis: calc(33.3333333333% - 16px);
+  min-width: 240px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+
+.product {
+  position: relative;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #ececec;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.product__name {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.product__price {
+  margin: 0;
+}
+
+.product__button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.button__icon {
+  display: inline-flex;
+}
+
+.button__icon--start {
+  margin-right: 10px;
+}
+
+.button__icon--end {
+  margin-left: 10px;
+}
+
+.reviews, .contact, .wholesale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(93, 11, 149);
+  background: linear-gradient(90deg, rgba(93, 11, 149, 0.7792366947) 0%, rgb(199, 88, 88) 50%, rgba(139, 85, 8, 0.9108893557) 100%);
+}
+.reviews h2, .contact h2, .wholesale h2 {
+  margin: 500px auto;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+
 footer {
   background-color: var(--colorBackgroundPrimary);
   padding-top: 60px;
@@ -411,10 +512,10 @@ footer {
 }
 .info-item:nth-child(1) {
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--colorTextContrast);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   gap: 7px;
@@ -429,18 +530,23 @@ footer {
   color: var(--colorTextContrast);
 }
 
-.footer-social_network .item-social_network-title {
+.item-social_network-title {
   text-transform: uppercase;
   color: var(--colorTextContrast);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
 }
-.footer-social_network .footer-icons {
+
+.footer-icons {
   display: flex;
   justify-content: center;
   gap: 10px;
   fill: var(--colorTextContrast);
 }
-.footer-social_network .footer-icons .footer-block-icon {
+.footer-icons .footer-block-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,11 +557,11 @@ footer {
   transition: background-color 0.25s, fill 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social_network .footer-icons .footer-block-icon:hover {
+.footer-icons .footer-block-icon:hover {
   background-color: var(--colorHover);
   border-radius: 50%;
 }
-.footer-social_network .footer-icons .footer-block-icon .footer-icon {
+.footer-icons .footer-block-icon .footer-icon {
   width: 20px;
   height: 20px;
 }

@@ -1,9 +1,13 @@
-.footer-social_network {
+
    
     .item-social_network-title {
       text-transform: uppercase;
       color: var(--colorTextContrast);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
     }
   
     .footer-icons {
@@ -34,5 +38,4 @@
         }
       }
     }
-  }
   
