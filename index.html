@@ -70,34 +70,22 @@
       
       <section class="catalog">
         <div class="container">
-          <h1 class="section__heading">Popular products</h1>
+          
+          <ul class="filter-list">
+            <li class="filter-item" data-filter="">All</li> 
+            <li class="filter-item" data-filter="liquid">Liquid</li>
+            <li class="filter-item" data-filter="elfbar">Elfbar</li>
+            <li class="filter-item" data-filter="pod">Pod</li>
+          </ul>
+          
 
           <ul class="grid">
+            
             <li class="grid__item">
-              <article class="product">
+              <article class="product elfbar">
                 <img
                   class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-2_large.png?format=webp&v=1530129318"
-                  alt="Кроссовки"
-                />
-                <h2 class="product__name">Boots</h2>
-                <p class="product__price">Price: 200 credits</p>
-                <button
-                  type="button"
-                  class="button product__button"
-                  aria-label="Add to cart"
-                >
-                  <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
-                  </svg>
-                </button>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product">
-                <img
-                  class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=webp&v=1530129458"
+                  src="src/img/elfbar/ice.jpg"
                   alt="Часы"
                 />
                 <h2 class="product__name">Watch</h2>
@@ -107,17 +95,17 @@
                   class="button product__button"
                   aria-label="Add to cart"
                 >
-                  <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
-                  </svg>
+                <svg class="button__icon" width="20" height="20">
+                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                </svg>
                 </button>
               </article>
             </li>
             <li class="grid__item">
-              <article class="product">
+              <article class="product elfbar">
                 <img
                   class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=webp&v=1530129341"
+                  src="src/img/elfbar/blast.png"
                   alt="Очки"
                 />
                 <h2 class="product__name">Glasses</h2>
@@ -127,17 +115,37 @@
                   class="button product__button"
                   aria-label="Add to cart"
                 >
+                <svg class="button__icon" width="20" height="20">
+                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                </svg>
+                </button>
+              </article>
+            </li>
+            <li class="grid__item">
+              <article class="product pod">
+                <img
+                  class="product__image"
+                  src="src/img/pod/hydra.jpg"
+                  alt="Лампа"
+                />
+                <h2 class="product__name">hydra</h2>
+                <p class="product__price">270 zl</p>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Add to cart"
+                >
                   <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
                   </svg>
                 </button>
               </article>
             </li>
             <li class="grid__item">
-              <article class="product">
+              <article class="product liquid">
                 <img
                   class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-1_large.png?format=webp&v=1530129292"
+                  src="./src/img/liquid/ice.png"
                   alt="Рюкзак"
                 />
                 <h2 class="product__name">Backpack</h2>
@@ -147,37 +155,18 @@
                   class="button product__button"
                   aria-label="Add to cart"
                 >
-                  <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
-                  </svg>
+                <svg class="button__icon" width="20" height="20">
+                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                </svg>
                 </button>
               </article>
             </li>
+            
             <li class="grid__item">
-              <article class="product">
+              <article class="product liquid">
                 <img
                   class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-4_large.png?format=webp&v=1530129360"
-                  alt="Кепка"
-                />
-                <h2 class="product__name">Cap</h2>
-                <p class="product__price">Price: 120 credits</p>
-                <button
-                  type="button"
-                  class="button product__button"
-                  aria-label="Add to cart"
-                >
-                  <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
-                  </svg>
-                </button>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product">
-                <img
-                  class="product__image"
-                  src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-6_large.png?format=webp&v=1530129477"
+                  src="src/img/liquid/lost.jpg"
                   alt="Лампа"
                 />
                 <h2 class="product__name">Lamp</h2>
@@ -188,8 +177,89 @@
                   aria-label="Add to cart"
                 >
                   <svg class="button__icon" width="20" height="20">
-                    <use href="#cart"></use>
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
                   </svg>
+                </button>
+              </article>
+            </li>
+            
+            <li class="grid__item">
+              <article class="product pod">
+                <img
+                  class="product__image"
+                  src="src/img/pod/xros.png"
+                  alt="Лампа"
+                />
+                <h2 class="product__name">xros</h2>
+                <p class="product__price">240 zl</p>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Add to cart"
+                >
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+              </article>
+            </li>
+            <li class="grid__item">
+              <article class="product pod">
+                <img
+                  class="product__image"
+                  src="src/img/pod/nano.png"
+                  alt="Лампа"
+                />
+                <h2 class="product__name">Lamp</h2>
+                <p class="product__price">Price: 240 credits</p>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Add to cart"
+                >
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+              </article>
+            </li>
+            <li class="grid__item">
+              <article class="product elfbar">
+                <img
+                  class="product__image"
+                  src="src/img/elfbar/apple.png"
+                  alt="Кроссовки"
+                />
+                <h2 class="product__name">apple</h2>
+                <p class="product__price">Price: 200 credits</p>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Add to cart"
+                >
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+              </article>
+            </li>
+            <li class="grid__item">
+              <article class="product liquid">
+                <img
+                  class="product__image"
+                  src="./src/img/liquid/mango.jpg"
+                  alt="Кепка"
+                />
+                <h2 class="product__name">Cap</h2>
+                <p class="product__price">Price: 120 credits</p>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Add to cart"
+                >
+                <svg class="button__icon" width="20" height="20">
+                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                </svg>
                 </button>
               </article>
             </li>
@@ -253,5 +323,6 @@
       </ul>
     </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

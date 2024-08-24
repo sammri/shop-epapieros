@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 250px;
+  padding-bottom: 240px;
 
 }
 
@@ -71,3 +71,13 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 1400px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  
+  }
+ 
+}
+
