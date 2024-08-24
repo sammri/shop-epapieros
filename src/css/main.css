@@ -177,7 +177,6 @@ body {
 
 .header-logo {
   max-width: 9vw;
-  height: auto;
   fill: aliceblue;
   flex-shrink: 0;
 }
