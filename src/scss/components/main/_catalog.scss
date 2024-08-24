@@ -47,7 +47,7 @@
     height: 4px;
     background-color: var(--colorHover);
     left: 0;
-    bottom: 0px; 
+    bottom: 5px; 
     border-radius: 2px;
     opacity: 0;
     transform: scaleX(0);
@@ -117,4 +117,10 @@
   
   .button__icon--end {
     margin-left: 10px;
+  }
+
+  @media (max-width: 500px) {
+      .filter-list{
+        gap: 15px;
+      }
   }
