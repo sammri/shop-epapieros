@@ -12,27 +12,27 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
-        <a href="#" class="header-photo">
+      <div class="container header__container">
+        <a href="#" class="header__photo">
           <img
-            class="header-logo"
+            class="header__logo"
             src="./src/img/logo/logo-header.svg"
             alt="logo-header"
           />
         </a>
-          <nav class="header-nav">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#" rel="preconnect" class="nav-link nav-link-active">KATALOG</a>
+          <nav class="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" rel="preconnect" class="nav__link nav__link--active">KATALOG</a>
               </li>
-              <li class="nav-item">
-                <a href="#rec" rel="preconnect" class="nav-link">RECENZJE</a>
+              <li class="nav__item">
+                <a href="#rec" rel="preconnect" class="nav__link">RECENZJE</a>
               </li>
-              <li class="nav-item">
-                <a href="#kon" rel="preconnect" class="nav-link">KONTAKT</a>
+              <li class="nav__item">
+                <a href="#kon" rel="preconnect" class="nav__link">KONTAKT</a>
               </li>
-              <li class="nav-item">
-                <a href="#hur" rel="preconnect" class="nav-link">HURTOWNIA</a>
+              <li class="nav__item">
+                <a href="#hur" rel="preconnect" class="nav__link">HURTOWNIA</a>
               </li>
             </ul>
           </nav>
@@ -80,60 +80,29 @@
           
 
           <ul class="grid">
-            
             <li class="grid__item">
               <article class="product elfbar">
                 <img
                   class="product__image"
                   src="src/img/elfbar/ice.jpg"
-                  alt="Часы"
+                  alt="ElfBar Ice"
                 />
-                <h2 class="product__name">Watch</h2>
-                <p class="product__price">Price: 400 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">ElfBar Ice 3000</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 5%
+                    <br>
+                    ✔&nbsp;3000 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: mentolowy lód
+                  </div>
+                  <p class="product__price">Cena: 400 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
-                >
-                <svg class="button__icon" width="20" height="20">
-                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
-                </svg>
-                </button>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product elfbar">
-                <img
-                  class="product__image"
-                  src="src/img/elfbar/blast.png"
-                  alt="Очки"
-                />
-                <h2 class="product__name">Glasses</h2>
-                <p class="product__price">Price: 150 credits</p>
-                <button
-                  type="button"
-                  class="button product__button"
-                  aria-label="Add to cart"
-                >
-                <svg class="button__icon" width="20" height="20">
-                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
-                </svg>
-                </button>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product pod">
-                <img
-                  class="product__image"
-                  src="src/img/pod/hydra.jpg"
-                  alt="Лампа"
-                />
-                <h2 class="product__name">hydra</h2>
-                <p class="product__price">270 zl</p>
-                <button
-                  type="button"
-                  class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
                   <svg class="button__icon" width="20" height="20">
                     <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
@@ -141,23 +110,96 @@
                 </button>
               </article>
             </li>
+          
+            <li class="grid__item">
+              <article class="product elfbar">
+                <img
+                  class="product__image"
+                  src="src/img/elfbar/blast.png"
+                  alt="ElfBar Blast"
+                />
+                <div class="product__description">
+                  <h2 class="product__name">ElfBar Blast 3000</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 5%
+                    <br>
+                    ✔&nbsp;3000 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: mieszanka owoców
+                  </div>
+                  <p class="product__price">Cena: 150 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Dodaj do koszyka"
+                >
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+              </article>
+            </li>
+          
+            <li class="grid__item">
+              <article class="product pod">
+                <img
+                  class="product__image"
+                  src="src/img/pod/hydra.jpg"
+                  alt="Hydra Pod"
+                />
+                <div class="product__description">
+                  <h2 class="product__name">Hydra Pod 2500</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 4%
+                    <br>
+                    ✔&nbsp;2500 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: tropikalne owoce
+                  </div>
+                  <p class="product__price">Cena: 270 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
+                <button
+                  type="button"
+                  class="button product__button"
+                  aria-label="Dodaj do koszyka"
+                >
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+              </article>
+            </li>
+          
             <li class="grid__item">
               <article class="product liquid">
                 <img
                   class="product__image"
                   src="./src/img/liquid/ice.png"
-                  alt="Рюкзак"
+                  alt="Liquid Ice"
                 />
-                <h2 class="product__name">Backpack</h2>
-                <p class="product__price">Price: 320 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">Liquid Ice 50 ml</h2>
+                  <div class="product__info">
+                    ✔&nbsp;PG/VG - 50/50
+                    <br>
+                    ✔&nbsp;Pojemność - 50 ml
+                    <br>
+                    ✔&nbsp;Smak: miętowy chłód
+                  </div>
+                  <p class="product__price">Cena: 320 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
-                <svg class="button__icon" width="20" height="20">
-                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
-                </svg>
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
                 </button>
               </article>
             </li>
@@ -167,14 +209,24 @@
                 <img
                   class="product__image"
                   src="src/img/liquid/lost.jpg"
-                  alt="Лампа"
+                  alt="Liquid Lost"
                 />
-                <h2 class="product__name">Lamp</h2>
-                <p class="product__price">Price: 240 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">Liquid Lost 60 ml</h2>
+                  <div class="product__info">
+                    ✔&nbsp;PG/VG - 60/40
+                    <br>
+                    ✔&nbsp;Pojemność - 60 ml
+                    <br>
+                    ✔&nbsp;Smak: jagodowy miks
+                  </div>
+                  <p class="product__price">Cena: 240 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
                   <svg class="button__icon" width="20" height="20">
                     <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
@@ -188,14 +240,24 @@
                 <img
                   class="product__image"
                   src="src/img/pod/xros.png"
-                  alt="Лампа"
+                  alt="XROS Pod"
                 />
-                <h2 class="product__name">xros</h2>
-                <p class="product__price">240 zl</p>
+                <div class="product__description">
+                  <h2 class="product__name">XROS Pod 1500</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 3.5%
+                    <br>
+                    ✔&nbsp;1500 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: arbuzowy sok
+                  </div>
+                  <p class="product__price">Cena: 240 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
                   <svg class="button__icon" width="20" height="20">
                     <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
@@ -203,19 +265,30 @@
                 </button>
               </article>
             </li>
+            
             <li class="grid__item">
               <article class="product pod">
                 <img
                   class="product__image"
                   src="src/img/pod/nano.png"
-                  alt="Лампа"
+                  alt="Nano Pod"
                 />
-                <h2 class="product__name">Lamp</h2>
-                <p class="product__price">Price: 240 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">Nano Pod 2000</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 3%
+                    <br>
+                    ✔&nbsp;2000 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: truskawkowy sorbet
+                  </div>
+                  <p class="product__price">Cena: 240 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
                   <svg class="button__icon" width="20" height="20">
                     <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
@@ -223,19 +296,30 @@
                 </button>
               </article>
             </li>
+            
             <li class="grid__item">
               <article class="product elfbar">
                 <img
                   class="product__image"
                   src="src/img/elfbar/apple.png"
-                  alt="Кроссовки"
+                  alt="ElfBar Apple"
                 />
-                <h2 class="product__name">apple</h2>
-                <p class="product__price">Price: 200 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">ElfBar Apple 3000</h2>
+                  <div class="product__info">
+                    ✔&nbsp;Moc - 5%
+                    <br>
+                    ✔&nbsp;3000 zaciągnięć
+                    <br>
+                    ✔&nbsp;Smak: soczyste jabłko
+                  </div>
+                  <p class="product__price">Cena: 200 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
                   <svg class="button__icon" width="20" height="20">
                     <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
@@ -243,23 +327,34 @@
                 </button>
               </article>
             </li>
+            
             <li class="grid__item">
               <article class="product liquid">
                 <img
                   class="product__image"
                   src="./src/img/liquid/mango.jpg"
-                  alt="Кепка"
+                  alt="Liquid Mango"
                 />
-                <h2 class="product__name">Cap</h2>
-                <p class="product__price">Price: 120 credits</p>
+                <div class="product__description">
+                  <h2 class="product__name">Liquid Mango 50 ml</h2>
+                  <div class="product__info">
+                    ✔&nbsp;PG/VG - 50/50
+                    <br>
+                    ✔&nbsp;Pojemność - 50 ml
+                    <br>
+                    ✔&nbsp;Smak: dojrzałe mango
+                  </div>
+                  <p class="product__price">Cena: 120 zł</p>
+                </div>
+                <button class="button product__buy">Kupić</button>
                 <button
                   type="button"
                   class="button product__button"
-                  aria-label="Add to cart"
+                  aria-label="Dodaj do koszyka"
                 >
-                <svg class="button__icon" width="20" height="20">
-                  <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
-                </svg>
+                  <svg class="button__icon" width="20" height="20">
+                    <use href="./src/img/footer-icons/symbol-defs.svg#icon-shopping-cart"></use>
+                  </svg>
                 </button>
               </article>
             </li>
