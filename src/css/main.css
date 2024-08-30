@@ -165,7 +165,7 @@ body {
   margin-right: auto;
 }
 
-.header-container {
+.header__container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -175,26 +175,26 @@ body {
   font-family: "New Amsterdam", sans-serif;
 }
 
-.header-logo {
+.header__logo {
   max-width: 9vw;
   fill: aliceblue;
   flex-shrink: 0;
 }
 
-.header-nav {
+.header__nav {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   flex-direction: row;
   gap: 4vw;
   flex-wrap: wrap;
 }
 
-.nav-link {
+.nav__link {
   letter-spacing: 1.5px;
   position: relative;
   transition: color 0.25s;
@@ -202,7 +202,7 @@ body {
   padding-bottom: 8px;
 }
 
-.nav-link::after {
+.nav__link::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -217,12 +217,12 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover::after {
+.nav__link:hover::after {
   transform: scaleX(1);
   opacity: 1;
 }
 
-.nav-link-active::after {
+.nav__link--active::after {
   transform: scaleX(1);
   opacity: 1;
 }
