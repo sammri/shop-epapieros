@@ -540,10 +540,214 @@ body {
   background: linear-gradient(90deg, rgba(93, 11, 149, 0.7792366947) 0%, rgb(199, 88, 88) 50%, rgba(139, 85, 8, 0.9108893557) 100%);
 }
 .reviews h2, .contact h2, .wholesale h2 {
-  margin: 500px auto;
   font-size: 50px;
   font-weight: 700;
   color: #fff;
+}
+
+.contact {
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 300px;
+}
+
+.contact::before {
+  content: " ";
+  width: 190PX;
+  height: 2px;
+  transform: translateY(150px);
+  background-color: var(--colorHover);
+}
+
+.reviews {
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+
+.reviews {
+  position: relative;
+  padding-top: 150px;
+}
+.reviews h2 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.star__img {
+  position: absolute; /* Абсолютное позиционирование для звезд */
+  top: 90px; /* Центрируем звезды относительно левого края */
+}
+
+.reviews__hr {
+  width: 50%;
+  height: 3px;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.reviews__grid {
+  width: 80%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  row-gap: 50px;
+}
+
+.reviews__grid__item {
+  flex-basis: calc(25% - 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid__photo {
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.kontakt__button {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: rgba(0, 65, 217, 0.2784313725);
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  padding: 25px;
+  box-shadow: 0px 8px 40px -15px rgb(249, 249, 255);
+  transition: box-shadow 1s;
+}
+.kontakt__button:hover {
+  box-shadow: none;
+}
+
+/* Container for the entire form */
+.form-container {
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.wholesale-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Title and subtitle styling */
+.form-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Slider section styling */
+.quantity-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.quantity-slider {
+  width: 50%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.quantity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ff5100;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-output {
+  font-size: 18px;
+  color: #333;
+  min-width: 40px;
+  text-align: left;
+}
+
+/* Input fields styling */
+.name-input,
+.phone-input {
+  width: 479px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/* Phone number section styling */
+.phone-container {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50px;
+}
+
+.country-code-select {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+
+.phone-input {
+  flex: 1;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6777ef;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #5661e5;
 }
 
 footer {

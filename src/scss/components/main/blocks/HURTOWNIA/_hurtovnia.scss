@@ -1,0 +1,116 @@
+/* Container for the entire form */
+.form-container {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.wholesale-form{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+/* Title and subtitle styling */
+.form-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Slider section styling */
+.quantity-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.quantity-slider {
+    width: 50%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.quantity-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff5100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-output {
+    font-size: 18px;
+    color: #333;
+    min-width: 40px;
+    text-align: left;
+}
+
+/* Input fields styling */
+.name-input,
+.phone-input {
+    width: 479px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Phone number section styling */
+.phone-container {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50px;
+}
+
+.country-code-select {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f0f0f0;
+}
+
+.phone-input {
+    flex: 1;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+/* Submit button styling */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6777ef;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #5661e5;
+}
