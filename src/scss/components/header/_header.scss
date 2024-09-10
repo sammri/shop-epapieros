@@ -3,10 +3,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2vw;
-  min-height: 70px;
+  min-height: 70px; 
   font-family: "New Amsterdam", sans-serif;
+  position: relative;
 }
 
 .header__logo {
@@ -14,7 +15,13 @@
   fill: aliceblue;
   flex-shrink: 0;
 }
-
+.menu-icon{
+  display: none;
+  position: absolute;
+  right: 15px;
+  
+  
+}
 .header__nav {
   flex-grow: 1;
   display: flex;
@@ -32,27 +39,31 @@
   letter-spacing: 1.5px;
   position: relative;
   transition: color 0.25s;
-  padding-bottom: 8px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 8px; 
 }
 
 .nav__link::after {
   position: absolute;
-  content: "";
+  content: "";  
   width: 100%;
   height: 4px;
   background-color: var(--colorHover);
   left: 0;
-  bottom: -8px;
+  bottom: -8px; 
+  border-radius: 2px;
   opacity: 0;
   transform: scaleX(0);
   transition: transform 0.25s, opacity 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover::after,
-.nav__link--active::after {
+.nav__link:hover::after {
   transform: scaleX(1);
   opacity: 1;
 }
+
+
 
 .header-button {
   text-align: center;
@@ -62,69 +73,116 @@
   font-weight: 400;
   text-transform: uppercase;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  transition: 0.2s ease-in-out;
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
 }
 
 .header-button:hover {
   background-color: #000000;
-  border-color: #ffffff;
+  border: 2px solid #ffffff;
   color: #ffffff;
 }
 
-/* Скрываем чекбокс */
-.menu-toggle {
-  display: none;
-}
-
-/* Иконка меню для мобильных */
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
 /* Media Queries */
+@media (max-width: 1400px) {
+  .header__container {
+    gap: 1vw;
+    min-height: 70px; 
+  }
+  
+  .nav__link::after {
+    bottom: -4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__container {
+    gap: 1vw;
+    min-height: 70px; 
+  }
+  
+  .nav__link::after {
+    bottom: 0px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    min-height: 70px;
+    gap: 0.5vw;
   }
-
+  
   .header__logo {
     max-width: 120px;
   }
+  
+  .nav__list {
+    gap: 1.5vw;
+  }
+  
+  .nav__link::after {
+    bottom: 0;
+  }
+}
 
-  .header-button {
-    display: none;
+@media (max-width: 768px) {
+  .header__container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--colorTextTertiary);
   }
 
-  .nav__list {
+  .header__nav {
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -100%;
+    width: 70%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
   }
 
-  .menu-icon {
-    display: block;
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* При активации чекбокса показываем меню */
-  .menu-toggle:checked ~ .header__nav .nav__list {
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: opacity 0.3s ease;
+  }
+
+  .header__nav.open {
     right: 0;
   }
 
-  .nav__link {
-    font-size: 20px;
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+  .header-button{
+    display: none;
   }
 }
+

@@ -18,31 +18,32 @@
       <a href="#" class="header__photo">
         <img class="header__logo" src="./src/img/logo/logo-header.svg" alt="logo-header" />
       </a>
-      <input type="checkbox" id="menuToggle" class="menu-toggle">
-      <label for="menuToggle" class="menu-icon">&#9776;</label> <!-- Иконка меню -->
   
-      <nav class="header__nav">
+      <div class="menu-icon" id="menuIcon">&#9776;</div>
+  
+      <nav class="header__nav" id="mobileMenu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--active">KATALOG</a>
+            <a href="#" rel="preconnect" class="nav__link">KATALOG</a>
           </li>
           <li class="nav__item">
-            <a href="#rec" class="nav__link">RECENZJE</a>
+            <a href="#rec" rel="preconnect" class="nav__link">RECENZJE</a>
           </li>
           <li class="nav__item">
-            <a href="#kon" class="nav__link">KONTAKT</a>
+            <a href="#kon" rel="preconnect" class="nav__link">KONTAKT</a>
           </li>
           <li class="nav__item">
-            <a href="#wholesale" class="nav__link">HURTOWNIA</a>
+            <a href="#wholesale" rel="preconnect" class="nav__link">HURTOWNIA</a>
           </li>
         </ul>
       </nav>
   
-      <div class="header-button">
-        <a href="https://t.me/GgYyPpSsY" target="_blank" rel="noopener">subskrybuj Telegram</a>
-      </div>
+      <div class="header-button"><a href="https://t.me/GgYyPpSsY" target="_blank" rel="noopener">subskrybuj Telegram</a></div>
+  
+      <div class="overlay" id="overlay"></div>
     </div>
   </header>
+  
   
   <main class="main">
     <section class="hero">
@@ -428,6 +429,7 @@
   <script src="./src/js/filtr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   <script src="src/js/hurt.js"></script>
+  <script src="src/js/header-menu.js"></script>
 </body>
 
 </html>
