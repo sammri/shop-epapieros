@@ -18,26 +18,32 @@
       <a href="#" class="header__photo">
         <img class="header__logo" src="./src/img/logo/logo-header.svg" alt="logo-header" />
       </a>
+      <input type="checkbox" id="menuToggle" class="menu-toggle">
+      <label for="menuToggle" class="menu-icon">&#9776;</label> <!-- Иконка меню -->
+  
       <nav class="header__nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" rel="preconnect" class="nav__link nav__link--active">KATALOG</a>
+            <a href="#" class="nav__link nav__link--active">KATALOG</a>
           </li>
           <li class="nav__item">
-            <a href="#rec" rel="preconnect" class="nav__link">RECENZJE</a>
+            <a href="#rec" class="nav__link">RECENZJE</a>
           </li>
           <li class="nav__item">
-            <a href="#kon " rel="preconnect" class="nav__link">KONTAKT</a>
+            <a href="#kon" class="nav__link">KONTAKT</a>
           </li>
           <li class="nav__item">
-            <a href="#wholesale" rel="preconnect" class="nav__link">HURTOWNIA</a>
+            <a href="#wholesale" class="nav__link">HURTOWNIA</a>
           </li>
         </ul>
       </nav>
-      <div class="header-button"><a href="https://t.me/GgYyPpSsY" target="_blank" class=""
-          data-tilda-event-name="/tilda/click/rec534374818/button1" data-buttonfieldset="button"
-          rel="noopener">subskrybuj Telegram</a></div>
+  
+      <div class="header-button">
+        <a href="https://t.me/GgYyPpSsY" target="_blank" rel="noopener">subskrybuj Telegram</a>
+      </div>
+    </div>
   </header>
+  
   <main class="main">
     <section class="hero">
       <div class="hero-video">
@@ -75,7 +81,7 @@
           <li class="filter-item" data-filter="">All</li>
           <li class="filter-item" data-filter="liquid">Liquid</li>
           <li class="filter-item" data-filter="elfbar">Elfbar</li>
-          <li class="filter-item" data-filter="pod">Pod</li>
+          <li class="filter-item" data-filter="pod">Vape</li>
         </ul>
 
 
@@ -91,6 +97,7 @@
                   ✔&nbsp;3000 zaciągnięć
                   <br>
                   ✔&nbsp;Smak: mentolowy lód
+                 
                 </div>
                 <p class="product__price">Cena: 400 zł</p>
               </div>
@@ -342,30 +349,30 @@
     </section>
     <section class="contact">
       <h2 id="kon">KONTAKT</h2>
-      <button type="submit" class="kontakt__button">Skontaktuj się z menadżerem</button>
+      <a href="https://t.me/GgYyPpSsY" class="kontakt__link">Skontaktuj się z menadżerem</a> 
     </section>
     <section class="wholesale" id="wholesale">
       <div class="form-container">
         <h2 class="form-title">
           Chcesz zostać klientem hurtowym?</h2>
-        <p class="form-subtitle">Wypełnij formularz, a my do Ciebie napiszemy!!</p>
+        <p class="form-subtitle" style="color: #fff;">Wypełnij formularz, a my do Ciebie napiszemy!!</p>
     
         <form class="wholesale-form" id="tg">
-            <label for="quantity" class="quantity-label">Jaka jest całkowita ilość, której potrzebujesz?</label>
+            <label for="quantity" class="quantity-label" style="color: #fff;">Jaka jest całkowita ilość, której potrzebujesz?</label>
             <div class="slider-container">
                 <input type="range" id="quantity" name="quantity" min="50" max="500" value="50" class="quantity-slider" oninput="this.nextElementSibling.value = this.value">
                 <output class="slider-output">50</output>
             </div>
   
             
-            <input type="text" id="name" name="name" class="name__input" placeholder="Ваше ім'я">
+            <input type="text" id="name" name="name" class="name__input" placeholder="Twoje imie">
     
-            <div class="phone-container">
+            <div class="email-container">
                
                 <input type="tel" id="email" name="email" class="email__input" placeholder="elfvapeshop@gmail.com">
             </div>
     
-            <button type="submit" class="submit__button">НАДІСЛАТИ ЗАЯВКУ</button>
+            <button type="submit" class="submit__button">WYŚLIJ WNIOSEK</button>
         </form>
     </div>
     
@@ -374,8 +381,6 @@
 
   <footer class="footer">
     <div class="container footer-container">
-
-
       <ul class="footer-info-list">
         <li class="info-item">
           Dellers
@@ -384,16 +389,16 @@
           </svg>
         </li>
         <li class="info-item">
-          <a href="https://t.me/GgYyPpSsY" class="info-link">@GgYyPpSsY</a>
+          <a href="https://t.me/GgYyPpSsY" target="_blank" class="info-link">@GgYyPpSsY</a>
         </li>
         <li class="info-item">
-          <a href="https://t.me/Fliinnt" class="info-link">@Fliinnt</a>
+          <a href="https://t.me/Fliinnt" target="_blank" class="info-link">@Fliinnt</a>
         </li>
         <li class="info-item">
         </li>
       </ul>
 
-      <a href="#" class="footer-logo-link"><img src="./src/img/logo/logo.svg" alt="logo-footer" class="footer-logo"></a>
+      <a href="#"  class="footer-logo-link"><img src="./src/img/logo/logo.svg" alt="logo-footer" class="footer-logo"></a>
       <ul class="footer-social_network">
         <li class="item-social_network-title">
           Przyłącz się
@@ -420,7 +425,7 @@
   </footer>
 
 
-  <script src="./src/js/main.js"></script>
+  <script src="./src/js/filtr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   <script src="src/js/hurt.js"></script>
 </body>

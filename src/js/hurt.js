@@ -5,10 +5,23 @@ const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 document.getElementById('tg').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let message = `<b>Заявка с сайта!</b>\n`;
-    message += `<b>Отправитель: </b> ${this.name.value}\n`;
-    message += `<b>Количество: </b> ${this.quantity.value}\n`;
-    message += `<b>Почта: </b> ${this.email.value}`;
+    const name = this.name.value.trim();
+    const quantity = this.quantity.value;
+    const email = this.email.value.trim();
+
+   
+    const orderNumber = generateOrderNumber();
+
+    if (!name || !quantity || !email) {
+        alert("Proszę wypełnić wszystkie pola formularza.");
+        return; 
+    }
+
+    let message = `<b>Заявка на опт!</b>\n`;
+    message += `<b>Номер заказа: </b> ${orderNumber}\n`; 
+    message += `<b>Покупатель: </b> ${name}\n`;
+    message += `<b>Количество: </b> ${quantity}\n`;
+    message += `<b>Email: </b> ${email}`;
 
     axios.post(URI_API, {
         chat_id: CHAT_ID,
@@ -16,13 +29,19 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         text: message
     }).then(response => {
         if(response.data.ok) {
-            alert("Заявка успешно отправлена!");
+            alert("Zgłoszenie zostało pomyślnie wysłane!");
         } else {
-            alert("Произошла ошибка при отправке заявки.");
+            alert("Wystąpił błąd podczas wysyłania zgłoszenia.");
         }
     }).catch(error => {
-        console.error("Ошибка при отправке сообщения в Telegram", error);
-        alert("Произошла ошибка при отправке заявки.");
+        console.error("Błąd podczas wysyłania wiadomości na Telegram", error);
+        alert("Wystąpił błąd podczas wysyłania zgłoszenia.");
     });
 });
 
+
+function generateOrderNumber() {
+    const timestamp = Date.now(); 
+    const randomNum = Math.floor(Math.random() * 1000); 
+    return `ORD-${timestamp}-${randomNum}`; 
+}
